@@ -1,0 +1,23 @@
+basic commands:
+1. git init   # first cd into a folder and use this command to initilzied it
+2. git status # check the status of the current folder from inside the folder
+3. git log    # check the history and commit_IDs
+advanced commands
+1. create/modify <file_name1> <file_name2>
+
+2. git status  # to see what files have been changed
+3. git diff <file_name1> # to see where <file_name1> has been changed
+   git checkout -- <file_name1> will undo the changes made to <file_name1> if changes are not OK. 
+
+4. git add <file_name1>  # add updated <file_name1> to git, after which git diff <file_name1> no longer show differences.
+   git reset HEAD <file_name1> will undo the git add <file_name1> so that we can use git diff <file_name1> to see the differences.
+
+5. git commit -m <message> # commit the change 
+   git reset --soft <commit_ID> # undo git commit to return to the pre-commit status where changes has been make, added but not commited yet.
+   In order to retrive the changes, you can use git reset HEAD <file_name1> to undo git add <file_name1>, and use git diff <file_name1> to see the changes, and
+   use git checkout --<file_name1> to discard the chages. Now we are back to the previous commit the same as hard reset!!
+
+6. git reset --hard <commitID> # to return to early commit version (current new version will be lost!!)
+
+
+ 
